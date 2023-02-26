@@ -79,7 +79,7 @@ class ActivityList : BaseActivity<ActivityListBinding>(ActivityListBinding::infl
                 timeLine.add(TimeLine(R.drawable.ic_add,"1.17",1643556677, ChangelogNote.v1point17()))
                 timeLine.add(TimeLine(R.drawable.ic_add,"1.18",1646097072, ChangelogNote.v1point18()))
                 timeLine.add(TimeLine(R.drawable.ic_add,"1.19",1650280804, ChangelogNote.v1point19()))
-                timeLine.add(TimeLine(R.drawable.ic_add,"1.20",0, ChangelogNote.v1point20()))
+                timeLine.add(TimeLine(R.drawable.ic_add,"1.20",1677392984, ChangelogNote.v1point20()))
             }
             TRANSLATOR -> {
                 toolbar.set(R.string.translator)
