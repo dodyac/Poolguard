@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/coinImage"
+            android:layout_width="@dimen/image_size"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/default_color"
+            android:layout_height="@dimen/image_size"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/x5dp" />
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:id="@+id/amount"
+            android:layout_width="@dimen/x120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_toEndOf="@id/coinImage"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_large"
+            android:padding="@dimen/x8dp"
+            android:textAllCaps="true"/>
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/amount"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginTop="@dimen/x5dp"
+            android:layout_toEndOf="@id/coinImage"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="@dimen/text_small" />
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_toEndOf="@id/amount"
+            android:ellipsize="end"
+            android:rotation="180"
+            app:shimmerTextWidth="0.4"
+            android:gravity="end"
+            android:maxLines="2"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/text_small" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

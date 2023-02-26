@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.acxdev.shimmer.widget.ShimmerText
+        android:id="@+id/crypto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        app:shimmerTextWidth="0.5" />
+
+    <com.acxdev.shimmer.widget.ShimmerText
+        android:id="@+id/currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crypto"
+        android:layout_marginTop="@dimen/x2dp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:shimmerTextWidth="0.3" />
+
+    <com.acxdev.shimmer.widget.ShimmerText
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currency"
+        android:layout_marginTop="@dimen/x2dp"
+        android:textAllCaps="true"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        app:shimmerTextWidth="0.2" />
+</RelativeLayout>

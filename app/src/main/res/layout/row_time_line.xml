@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/image_size_extra_small"
+        android:layout_height="@dimen/image_size_extra_small"
+        app:civ_border_color="@color/text"
+        app:civ_border_width="1.5dp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="1.5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon"
+        android:layout_alignBottom="@id/field"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:background="@color/text" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_parent_small"
+        android:layout_marginTop="@dimen/x2dp"
+        android:layout_marginEnd="@dimen/padding_parent_small"
+        android:layout_toStartOf="@id/date"
+        android:layout_toEndOf="@id/icon"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/version"
+        android:layout_marginStart="@dimen/padding_parent_small"
+        android:layout_toEndOf="@id/icon" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/padding_parent_small"
+        android:layout_marginTop="@dimen/x5dp"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/text_small" />
+</RelativeLayout>

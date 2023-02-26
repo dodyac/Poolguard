@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardViewStyle"
+    android:layout_width="match_parent"
+    android:id="@+id/card"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?colorSwitchThumbNormal"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x8dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/imageCard"
+            style="@style/cardViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <com.acxdev.shimmer.widget.ShimmerImage
+                android:id="@+id/image"
+                android:layout_width="@dimen/x70dp"
+                android:layout_height="@dimen/x70dp"
+                android:scaleType="fitCenter" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x10dp"
+            android:layout_marginTop="@dimen/x10dp"
+            android:layout_toEndOf="@id/imageCard"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/text_small"
+            app:shimmerTextWidth="0.5" />
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_marginStart="@dimen/x10dp"
+            android:layout_marginTop="@dimen/x10dp"
+            android:layout_toEndOf="@id/imageCard"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

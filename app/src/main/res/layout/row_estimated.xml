@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x10dp"
+        android:orientation="vertical">
+
+        <com.acxdev.shimmer.widget.ShimmerImage
+            android:id="@+id/coinIcon"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:padding="@dimen/x5dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/coinIcon"
+            app:layout_constraintEnd_toStartOf="@+id/info"
+            app:layout_constraintStart_toEndOf="@+id/coinIcon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.acxdev.shimmer.widget.ShimmerText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                app:shimmerTextWidth="0.7" />
+
+            <com.acxdev.shimmer.widget.ShimmerText
+                android:id="@+id/symbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/text_small"
+                app:shimmerTextWidth="0.2" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/info"
+            android:layout_width="@dimen/padding_parent"
+            android:layout_height="@dimen/padding_parent"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/x5dp"
+            android:src="@drawable/icons8_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginTop="@dimen/padding_parent_small"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:gravity="center"
+            android:text="@string/daily"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coinIcon" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginTop="@dimen/padding_parent_small"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:gravity="center"
+            android:text="@string/monthly"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/coinIcon" />
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:id="@+id/rewardDaily"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginTop="@dimen/x2dp"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:gravity="center"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:id="@+id/rewardMonthly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginTop="@dimen/x2dp"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:gravity="center"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:id="@+id/localDaily"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x4dp"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:layout_marginBottom="@dimen/padding_parent_small"
+            android:gravity="center"
+            android:textColor="?colorPrimary"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rewardDaily" />
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:id="@+id/localMonthly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginTop="@dimen/x4dp"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:layout_marginBottom="@dimen/padding_parent_small"
+            android:gravity="center"
+            android:textColor="?colorPrimary"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/rewardMonthly" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

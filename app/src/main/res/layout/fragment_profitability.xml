@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSwitchThumbNormal"
+    tools:context=".ui.profitability.FragmentProfitability">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded_bottom"
+        android:elevation="@dimen/x2dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profitability_calculator"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/cardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x10dp"
+            app:cardBackgroundColor="@color/backgroundSecondary"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x110dp"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="?actionBarSize"
+                android:orientation="vertical">
+
+                <com.acxdev.commonFunction.widget.NestedScrollableHost
+                    android:id="@+id/nestedScrollableHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/coin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:padding="@dimen/padding_parent_small" />
+                </com.acxdev.commonFunction.widget.NestedScrollableHost>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView"
+                    style="@style/cardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/x8dp"
+                    android:layout_marginTop="@dimen/x8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/unitCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nestedScrollableHost">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/hashRate"
+                        style="@style/tilStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/x0dp"
+                        android:hint="@string/hashrate">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/unitCard"
+                    style="@style/cardViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/x8dp"
+                    android:layout_marginEnd="@dimen/x8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nestedScrollableHost">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/actStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/x0dp"
+                        android:hint="@string/unit">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/unit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:importantForAutofill="no"
+                            android:inputType="none"
+                            android:text="@string/mh_s" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x8dp"
+                    android:layout_marginEnd="@dimen/x8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/cardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/power"
+                            style="@style/tilStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/x0dp"
+                            android:hint="@string/power"
+                            app:suffixText="W">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="numberDecimal"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/cardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/powerCost"
+                            style="@style/tilStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/x0dp"
+                            android:hint="@string/cost">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="numberDecimal"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/cardViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/fees"
+                            style="@style/tilStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/x0dp"
+                            android:hint="@string/pool_fee"
+                            app:suffixText="%">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="numberDecimal"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/calculate"
+                    style="@style/buttonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginStart="@dimen/x14dp"
+                    android:layout_marginTop="@dimen/x16dp"
+                    android:layout_marginEnd="@dimen/x14dp"
+                    android:text="@string/calculate"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/estimatedCard"
+                    style="@style/cardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x8dp"
+                    android:layout_marginTop="@dimen/x16dp"
+                    android:layout_marginEnd="@dimen/x8dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/calculate">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_parent">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estimated_earnings"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/estimatedInfo"
+                            android:layout_width="@dimen/padding_parent"
+                            android:layout_height="@dimen/padding_parent"
+                            android:layout_marginStart="@dimen/x8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icons8_info"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView"
+                            app:layout_constraintStart_toEndOf="@+id/textView"
+                            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                        <ImageButton
+                            android:id="@+id/estimatedSwitch"
+                            android:layout_width="@dimen/image_size_extra_small"
+                            android:layout_height="@dimen/image_size_extra_small"
+                            android:layout_marginEnd="@dimen/x16dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icons8_data_transfer_1"
+                            app:layout_constraintEnd_toStartOf="@+id/pinnedSwitch"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/pinnedSwitch"
+                            android:layout_width="@dimen/image_size_extra_small"
+                            android:layout_height="@dimen/image_size_extra_small"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icons8_push_pin"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <include
+                            android:id="@+id/estimated"
+                            layout="@layout/layout_crypto_currency_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x4dp"
+                            app:layout_constraintTop_toBottomOf="@+id/estimatedSwitch" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dakow"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x5dp"
+                            android:layout_marginTop="@dimen/padding_parent"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardCornerRadius="@dimen/card_corner_small"
+                            app:cardElevation="@dimen/x0dp"
+                            app:cardUseCompatPadding="false"
+                            app:layout_constraintTop_toBottomOf="@+id/estimated">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:id="@+id/poolFee"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/red" />
+
+                                <View
+                                    android:id="@+id/powerCostx"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/yellow" />
+
+                                <View
+                                    android:id="@+id/profit"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/green" />
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.acxdev.shimmer.widget.ShimmerText
+                            android:id="@+id/poolFeeText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x16dp"
+                            android:drawablePadding="@dimen/x6dp"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="@dimen/text_small"
+                            app:drawableStartCompat="@drawable/bg_circle_8dp"
+                            app:drawableTint="@color/red"
+                            app:layout_constraintTop_toBottomOf="@+id/dakow"
+                            app:shimmerTextWidth="0.3" />
+
+                        <com.acxdev.shimmer.widget.ShimmerText
+                            android:id="@+id/powerCostText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x4dp"
+                            android:drawablePadding="@dimen/x6dp"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="@dimen/text_small"
+                            app:drawableStartCompat="@drawable/bg_circle_8dp"
+                            app:drawableTint="@color/yellow"
+                            app:layout_constraintTop_toBottomOf="@+id/poolFeeText"
+                            app:shimmerTextWidth="0.5" />
+
+                        <com.acxdev.shimmer.widget.ShimmerText
+                            android:id="@+id/profitText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x4dp"
+                            android:drawablePadding="@dimen/x6dp"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="@dimen/text_small"
+                            app:drawableStartCompat="@drawable/bg_circle_8dp"
+                            app:drawableTint="@color/green"
+                            app:layout_constraintTop_toBottomOf="@+id/powerCostText"
+                            app:shimmerTextWidth="0.4" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/gpu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/x8dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x110dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/cardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/device">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/powerCostGpu"
+                        style="@style/tilStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/x0dp"
+                        android:hint="@string/cost">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/device"
+                    style="@style/cardViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/filter"
+                    android:tooltipText="@string/myDevice">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/x14dp"
+                        android:src="@drawable/icons8_video_card" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/filter"
+                    style="@style/cardViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:tooltipText="@string/filter">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/x14dp"
+                        android:src="@drawable/icons8_slider" />
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/calculateGpus"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginStart="@dimen/x4dp"
+                android:layout_marginTop="@dimen/x8dp"
+                android:layout_marginEnd="@dimen/x4dp"
+                android:text="@string/calculate"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/profits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--            <com.airbnb.lottie.LottieAnimationView-->
+            <!--                android:layout_width="@dimen/x200dp"-->
+            <!--                android:layout_height="@dimen/x200dp"-->
+            <!--                app:lottie_autoPlay="true"-->
+            <!--                app:lottie_loop="true"-->
+            <!--                app:lottie_rawRes="@raw/ic_plant" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/title"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center_horizontal"-->
+            <!--                android:layout_marginStart="@dimen/padding_parent"-->
+            <!--                android:layout_marginEnd="@dimen/padding_parent"-->
+            <!--                android:gravity="center_horizontal"-->
+            <!--                android:text="Coming Soon"-->
+            <!--                android:textSize="@dimen/text_extra_large"-->
+            <!--                android:textStyle="bold" />-->
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

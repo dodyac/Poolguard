@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardViewStyleBig"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/sheetToolbar"
+            layout="@layout/layout_toolbar_sheet" />
+
+        <com.acxdev.commonFunction.widget.MaxHeightNestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@+id/sheetToolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x16dp"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/block"
+                    layout="@layout/layout_recycler_view_all" />
+
+                <include
+                    android:id="@+id/difficulty"
+                    layout="@layout/layout_recycler_view_all" />
+
+                <include
+                    android:id="@+id/algorithm"
+                    layout="@layout/layout_recycler_view_all" />
+            </LinearLayout>
+        </com.acxdev.commonFunction.widget.MaxHeightNestedScrollView>
+
+        <include
+            android:id="@+id/button"
+            layout="@layout/layout_button_choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scroll" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

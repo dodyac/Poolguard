@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardViewStyleBig"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/sheetToolbar"
+            layout="@layout/layout_toolbar_sheet" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/whatsNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_parent"
+            android:scrollbars="vertical"
+            app:layout_constraintHeight_max="350dp"
+            app:layout_constraintTop_toBottomOf="@+id/sheetToolbar" />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/whatsNew"
+            android:id="@+id/content"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_parent"
+            android:textStyle="bold" />
+
+        <include
+            android:id="@+id/button"
+            layout="@layout/layout_button_choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

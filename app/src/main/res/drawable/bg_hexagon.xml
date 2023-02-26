@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="21.83dp"
+    android:height="24dp"
+    android:viewportWidth="514"
+    android:viewportHeight="562">
+  <group>
+    <path
+        android:strokeColor="@color/cardview_shadow_start_color"
+        android:strokeWidth="5"
+        android:pathData="M452.27,123.103 L297.33,33.409C273.37,19.53 243.83,19.53 219.87,33.409L61.73,124.967C37.77,138.846 23,164.481 23,192.238L23,371.626C23,399.384 37.77,425.018 61.73,438.897L216.67,528.591C240.63,542.47 270.17,542.47 294.13,528.591L452.27,437.032C476.23,423.154 491,397.519 491,369.762L491,190.374C491,162.616 476.23,136.982 452.27,123.103Z"
+        android:fillColor="?colorControlActivated"
+        android:fillType="evenOdd"/>
+  </group>
+</vector>

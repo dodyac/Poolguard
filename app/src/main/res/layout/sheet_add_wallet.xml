@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/cardViewStyleBig"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/sheetToolbar"
+            layout="@layout/layout_toolbar_sheet" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/coin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="@dimen/padding_parent"
+            android:layout_marginEnd="-3dp"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/padding_parent"
+            android:paddingEnd="@dimen/padding_parent"
+            app:layout_constraintTop_toBottomOf="@+id/sheetToolbar"
+            tools:itemCount="1"
+            tools:listitem="@layout/row_coin" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/nameCard"
+            style="@style/cardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent"
+            android:layout_marginTop="@dimen/padding_parent"
+            android:layout_marginEnd="@dimen/padding_parent"
+            app:layout_constraintTop_toBottomOf="@+id/coin">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                style="@style/tilStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/x0dp"
+                android:hint="@string/name"
+                app:hintTextColor="?colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/walletCard"
+            style="@style/cardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent"
+            android:layout_marginEnd="@dimen/padding_parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameCard">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/wallet"
+                style="@style/tilStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x0dp"
+                android:hint="@string/wallet_address"
+                app:endIconCheckable="true"
+                app:endIconDrawable="@drawable/icons8_paste"
+                app:endIconMode="custom"
+                app:endIconTint="?colorSecondaryVariant"
+                app:hintTextColor="?colorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/checkWalletAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x20dp"
+            android:layout_marginTop="@dimen/x8dp"
+            android:layout_marginEnd="@dimen/x20dp"
+            android:background="@drawable/bg_rounded"
+            android:backgroundTint="@color/redSecondary"
+            android:drawablePadding="@dimen/x6dp"
+            android:paddingStart="@dimen/x10dp"
+            android:paddingTop="@dimen/x16dp"
+            android:paddingEnd="@dimen/x10dp"
+            android:paddingBottom="@dimen/x16dp"
+            android:text="@string/checkWalletAddress"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_small"
+            app:drawableStartCompat="@drawable/icons8_info"
+            app:drawableTint="@color/red"
+            app:layout_constraintTop_toBottomOf="@+id/walletCard" />
+
+        <include
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_button_choice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkWalletAddress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

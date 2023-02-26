@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/pool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_circle_shimmer"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_hexagon"
+        android:padding="@dimen/x6dp"
+        android:translationZ="@dimen/x4dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        style="@style/cardViewStyle"
+        android:layout_marginStart="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x10dp">
+
+            <com.acxdev.shimmer.widget.ShimmerImage
+                android:id="@+id/coinIcon"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/x5dp"
+                android:scaleType="fitCenter" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/padding_parent_small"
+                android:layout_marginEnd="@dimen/padding_parent_small"
+                android:layout_toEndOf="@id/coinIcon"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.acxdev.shimmer.widget.ShimmerText
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="@dimen/x4dp"
+                        android:layout_toStartOf="@id/unpaidBalance"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        app:shimmerTextWidth="0.3"
+                        android:textStyle="bold" />
+
+                    <com.acxdev.shimmer.widget.ShimmerText
+                        android:id="@+id/unpaidBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="@dimen/x4dp"
+                        android:gravity="end"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5dp">
+
+                    <com.acxdev.shimmer.widget.ShimmerText
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="@dimen/x4dp"
+                        android:layout_toStartOf="@id/hashRate"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_small" />
+
+                    <com.acxdev.shimmer.widget.ShimmerText
+                        android:id="@+id/hashRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="@dimen/x4dp"
+                        android:gravity="end"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_small" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

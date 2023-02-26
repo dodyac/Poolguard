@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSwitchThumbNormal"
+    android:fillViewport="true"
+    tools:context=".ui.main.home.FragmentHome">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/autoCheck"
+            style="@style/switchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x8dp"
+            android:text="@string/autoUpdate" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text="@string/estimated_earnings"
+            android:textSize="@dimen/text_extra_large"
+            android:textStyle="bold" />
+
+        <com.acxdev.commonFunction.widget.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.acxdev.shimmer.widget.ShimmerRecycler
+                android:id="@+id/estimated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/x8dp"
+                android:paddingEnd="@dimen/x8dp"
+                app:angle="45"
+                app:shimmerRecyclerCount="1"
+                app:shimmerRecyclerLayout="@layout/row_estimated" />
+        </com.acxdev.commonFunction.widget.NestedScrollableHost>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="@dimen/padding_parent"
+            android:text="@string/featured_coins"
+            android:textSize="@dimen/text_extra_large"
+            android:textStyle="bold" />
+
+        <com.acxdev.commonFunction.widget.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.acxdev.shimmer.widget.ShimmerRecycler
+                android:id="@+id/coin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/x8dp"
+                android:paddingEnd="@dimen/x8dp"
+                app:angle="45"
+                app:shimmerRecyclerCount="2"
+                app:shimmerRecyclerLayout="@layout/row_coin_chart_shimmer"
+                app:layout_manager="grid" />
+        </com.acxdev.commonFunction.widget.NestedScrollableHost>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="@dimen/x16dp"
+            android:text="@string/latest_news"
+            android:textSize="@dimen/text_extra_large"
+            android:textStyle="bold" />
+
+        <com.acxdev.shimmer.widget.ShimmerRecycler
+            android:id="@+id/news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmerRecyclerCount="3"
+            app:shimmerRecyclerLayout="@layout/row_news" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

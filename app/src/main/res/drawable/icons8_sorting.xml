@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M20,17H10c-1.105,0 -2,0.895 -2,2l0,0c0,1.105 0.895,2 2,2h10c1.105,0 2,-0.895 2,-2l0,0C22,17.895 21.105,17 20,17z"
+      android:strokeAlpha="0.35"
+      android:fillColor="?colorSecondaryVariant"
+      android:fillAlpha="0.35"/>
+  <path
+      android:pathData="M17,10h-7c-1.105,0 -2,0.895 -2,2l0,0c0,1.105 0.895,2 2,2h7c1.105,0 2,-0.895 2,-2l0,0C19,10.895 18.105,10 17,10z"
+      android:strokeAlpha="0.35"
+      android:fillColor="?colorSecondaryVariant"
+      android:fillAlpha="0.35"/>
+  <path
+      android:pathData="M15,3h-5C8.895,3 8,3.895 8,5l0,0c0,1.105 0.895,2 2,2h5c1.105,0 2,-0.895 2,-2l0,0C17,3.895 16.105,3 15,3z"
+      android:strokeAlpha="0.35"
+      android:fillColor="?colorSecondaryVariant"
+      android:fillAlpha="0.35"/>
+  <path
+      android:pathData="M4,5m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
+      android:fillColor="?colorSecondaryVariant"/>
+  <path
+      android:pathData="M4,12m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
+      android:fillColor="?colorSecondaryVariant"/>
+  <path
+      android:pathData="M4,19m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
+      android:fillColor="?colorSecondaryVariant"/>
+</vector>

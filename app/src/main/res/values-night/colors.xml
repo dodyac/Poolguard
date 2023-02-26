@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text">#FFFFFF</color>
+    <color name="background">#18181A</color>
+    <color name="cardBackground">#242426</color>
+    <color name="cardBackground2">#1AFFFFFF</color>
+    <color name="blackSecondary">#2D2D40</color>
+
+    <color name="pool">#1AFFFFFF</color>
+    <color name="textSecondary">#8E9198</color>
+    <color name="textSecondary2">#207080B3</color>
+    <color name="backgroundSecondary">#2C2C2C</color>
+    <color name="backgroundSecondary2">#2C2C2C</color>
+</resources>

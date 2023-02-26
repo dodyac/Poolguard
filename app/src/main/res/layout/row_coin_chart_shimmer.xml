@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/x10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.acxdev.shimmer.widget.ShimmerImage
+                android:id="@+id/icon"
+                android:layout_width="@dimen/image_size_small"
+                android:layout_height="@dimen/image_size_small"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter" />
+
+            <com.acxdev.shimmer.widget.ShimmerText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shimmerTextWidth="0.7"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/padding_parent_small"
+                android:layout_toEndOf="@id/icon"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50dp"
+            android:layout_marginTop="@dimen/padding_parent_small"
+            android:layout_marginBottom="@dimen/padding_parent_small"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ic_chart_shimmer" />
+
+        <com.acxdev.shimmer.widget.ShimmerText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            app:shimmerTextWidth="0.5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/x5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/padding_parent"
+                android:layout_height="@dimen/padding_parent"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/default_color" />
+
+            <com.acxdev.shimmer.widget.ShimmerText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                app:shimmerTextWidth="0.2" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSwitchThumbNormal"
+    tools:context=".ui.wallet.FragmentWallet">
+
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/x24dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/x200dp"
+            android:id="@+id/lottie"
+            android:layout_height="@dimen/x200dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/il_analytic" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/x16dp"
+            android:layout_marginTop="@dimen/x16dp"
+            android:text="@string/emptyWalletTitle"
+            android:layout_marginEnd="@dimen/x16dp"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:text="@string/emptyWalletSubtitle"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/padding_parent"
+            android:gravity="center_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            style="@style/buttonStyle"
+            android:text="@string/title_add_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/padding_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_bottom"
+                android:elevation="@dimen/x2dp"
+                android:padding="@dimen/padding_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x16dp"
+                    android:text="@string/wallet"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/addWallet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/addWallet"
+                    android:layout_width="@dimen/image_size_extra_small"
+                    android:layout_height="@dimen/image_size_extra_small"
+                    android:layout_marginEnd="@dimen/x16dp"
+                    android:layout_toStartOf="@id/sort"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/x5dp"
+                    android:src="@drawable/icons8_plus_math"
+                    android:tooltipText="@string/add_more_wallet"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintEnd_toStartOf="@+id/showBy"
+                    app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+                <ImageButton
+                    android:id="@+id/showBy"
+                    android:layout_width="@dimen/image_size_extra_small"
+                    android:layout_height="@dimen/image_size_extra_small"
+                    android:layout_marginEnd="@dimen/x16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/x5dp"
+                    android:src="@drawable/icons8_money"
+                    android:tooltipText="@string/currencyType"
+                    app:layout_constraintBottom_toBottomOf="@+id/addWallet"
+                    app:layout_constraintEnd_toStartOf="@+id/sort"
+                    app:layout_constraintTop_toTopOf="@+id/addWallet" />
+
+                <ImageButton
+                    android:id="@+id/sort"
+                    android:layout_width="@dimen/image_size_extra_small"
+                    android:layout_height="@dimen/image_size_extra_small"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/x5dp"
+                    android:src="@drawable/icons8_sorting"
+                    android:tooltipText="@string/sort"
+                    app:layout_constraintBottom_toBottomOf="@+id/addWallet"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addWallet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_parent_small">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/autoCheck"
+                    style="@style/switchStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/autoUpdate" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/count"
+                    style="@style/cardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/x16dp"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/hashRate"
+                            layout="@layout/layout_value_text_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/x8dp"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="0.7dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/x4dp"
+                            android:layout_marginBottom="@dimen/x4dp"
+                            android:background="@color/textSecondary" />
+
+                        <include
+                            android:id="@+id/balance"
+                            layout="@layout/layout_value_text_2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/x8dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.acxdev.shimmer.widget.ShimmerRecycler
+                    android:id="@+id/wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="?actionBarSize"
+                    app:angle="45"
+                    app:grid="1"
+                    app:shimmerRecyclerLayout="@layout/row_wallet" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

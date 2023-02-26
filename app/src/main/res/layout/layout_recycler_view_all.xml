@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/x16dp">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/text"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/x20dp"
+        android:text="@string/viewAll"
+        android:textColor="?colorPrimary"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="@dimen/x4dp"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/x16dp"
+        android:paddingEnd="@dimen/x16dp"
+        tools:itemCount="1"
+        tools:listitem="@layout/row_coin" />
+</RelativeLayout>

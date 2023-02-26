@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_menu"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/navigation_wallet"
+        android:icon="@drawable/ic_wallet_menu"
+        android:title="@string/wallets" />
+    <item
+        android:id="@+id/navigation_news"
+        android:icon="@drawable/ic_news_menu"
+        android:title="@string/news" />
+    <item
+        android:id="@+id/navigation_profitability"
+        android:icon="@drawable/ic_calculator_menu"
+        android:title="@string/calculator" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_setting_menu"
+        android:title="@string/settings" />
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSwitchThumbNormal"
+    tools:context=".ui.main.ActivityMain">
+
+    <TextView
+        android:id="@+id/debugMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/x20dp"
+        android:layout_marginBottom="@dimen/x80dp"
+        android:background="@drawable/bg_rounded_small"
+        android:backgroundTint="@color/red"
+        android:paddingStart="@dimen/x16dp"
+        android:paddingTop="@dimen/x8dp"
+        android:visibility="gone"
+        android:paddingEnd="@dimen/x16dp"
+        android:paddingBottom="@dimen/x8dp"
+        android:text="Debug Version"
+        android:textColor="@color/white"
+        android:translationZ="@dimen/x8dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomCard"
+        style="@style/cardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardCornerRadius="@dimen/x0dp"
+        app:cardElevation="@dimen/x10dp"
+        app:cardUseCompatPadding="false"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorControlActivated"
+            app:itemIconTint="@color/selector_bottom"
+            app:menu="@menu/bottom_nav_menu" />
+    </com.google.android.material.card.MaterialCardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

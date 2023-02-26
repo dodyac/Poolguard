@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardViewStyle"
+    android:layout_width="@dimen/image_size_extra_large"
+    android:layout_height="wrap_content">
+
+    <com.acxdev.commonFunction.widget.SquareRelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/x10dp"
+            android:orientation="vertical">
+
+            <com.acxdev.shimmer.widget.ShimmerImage
+                android:id="@+id/icon"
+                android:layout_width="@dimen/image_size_small"
+                android:layout_height="@dimen/image_size_small"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.acxdev.shimmer.widget.ShimmerText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_parent_small"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon"
+                app:layout_constraintTop_toTopOf="@+id/icon"
+                app:shimmerTextWidth="0.3" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x50dp"
+                android:layout_marginTop="@dimen/padding_parent_small"
+                app:layout_constraintTop_toBottomOf="@+id/icon" />
+
+            <com.acxdev.shimmer.widget.ShimmerText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_parent_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/chart"
+                app:shimmerTextWidth="0.5" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="@dimen/padding_parent"
+                android:layout_height="@dimen/padding_parent"
+                android:layout_marginTop="@dimen/x5dp"
+                android:src="@drawable/icons8_play"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price" />
+
+            <com.acxdev.shimmer.widget.ShimmerText
+                android:id="@+id/percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/arrow"
+                app:layout_constraintTop_toTopOf="@+id/arrow"
+                app:shimmerTextWidth="0.1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.acxdev.commonFunction.widget.SquareRelativeLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSwitchThumbNormal"
+    tools:context=".ui.dashboard.ActivityDashboard">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_parent_small">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.acxdev.shimmer.widget.ShimmerImage
+                        android:id="@+id/poolIcon"
+                        android:layout_width="@dimen/x20dp"
+                        android:layout_height="@dimen/x20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/x4dp"
+                        android:padding="@dimen/x2dp"
+                        android:scaleType="fitCenter" />
+
+                    <com.acxdev.shimmer.widget.ShimmerText
+                        android:id="@+id/poolName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/x4dp"
+                        android:layout_marginEnd="@dimen/x4dp"
+                        android:layout_toStartOf="@id/autoCheck"
+                        android:layout_toEndOf="@id/poolIcon"
+                        app:shimmerTextCornerRadius="8"
+                        app:shimmerTextWidth="0.4" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/autoCheck"
+                        style="@style/switchStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/autoUpdate" />
+                </RelativeLayout>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/cardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_parent">
+
+                        <com.acxdev.shimmer.widget.ShimmerImage
+                            android:id="@+id/coin"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/coin"
+                            android:padding="@dimen/x5dp" />
+
+                        <include
+                            android:id="@+id/unpaid"
+                            layout="@layout/layout_crypto_currency_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/padding_parent_small"
+                            android:layout_marginEnd="@dimen/padding_parent_small"
+                            android:layout_toStartOf="@id/coin" />
+
+                        <include
+                            android:id="@+id/immature"
+                            layout="@layout/layout_crypto_currency_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/unpaid"
+                            android:layout_marginStart="@dimen/padding_parent_small"
+                            android:layout_marginTop="@dimen/padding_parent_small"
+                            android:layout_marginEnd="@dimen/padding_parent_small"
+                            android:layout_toStartOf="@id/coin"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/sliderHashRate"
+                        layout="@layout/layout_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2" />
+
+                    <include
+                        android:id="@+id/sliderShares"
+                        layout="@layout/layout_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2" />
+
+                    <include
+                        android:id="@+id/worker"
+                        layout="@layout/layout_value_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/chartShimmer"
+                    layout="@layout/layout_view_pager_chart_shimmer" />
+
+                <include
+                    android:id="@+id/chart"
+                    layout="@layout/layout_view_pager_chart"
+                    android:visibility="gone" />
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/cardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_parent">
+
+                        <com.acxdev.shimmer.widget.ShimmerImage
+                            android:id="@+id/coinImage"
+                            android:layout_width="@dimen/x50dp"
+                            android:layout_height="@dimen/x50dp"
+                            app:layout_constraintBottom_toTopOf="@id/coinInfo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/x16dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/coinImage"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/coinImage"
+                            app:layout_constraintTop_toTopOf="@+id/coinImage">
+
+                            <TextView
+                                android:id="@+id/coinName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toStartOf="@+id/coinExchange"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/coinSymbol"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/textSecondary"
+                                android:textSize="@dimen/text_small"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/coinName" />
+
+                            <TextView
+                                android:id="@+id/coinExchange"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/x10dp"
+                                android:gravity="end"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/arrow"
+                                android:layout_width="@dimen/padding_parent"
+                                android:layout_height="@dimen/padding_parent"
+                                android:layout_below="@id/coinExchange"
+                                android:padding="@dimen/x4dp"
+                                android:src="@drawable/icons8_play"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/coinPTC"
+                                app:layout_constraintTop_toBottomOf="@id/coinExchange"
+                                app:tint="?colorControlActivated" />
+
+                            <TextView
+                                android:id="@+id/coinPTC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_small"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/coinExchange" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/coinInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x16dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/coinImage">
+
+                            <include
+                                android:id="@+id/netHash"
+                                layout="@layout/layout_value_text_2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/x8dp"
+                                android:layout_weight="1" />
+
+                            <View
+                                android:layout_width="0.7dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/x4dp"
+                                android:layout_marginBottom="@dimen/x4dp"
+                                android:background="@color/textSecondary" />
+
+                            <include
+                                android:id="@+id/diff"
+                                layout="@layout/layout_value_text_2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/x8dp"
+                                android:layout_marginEnd="@dimen/x8dp"
+                                android:layout_weight="1" />
+
+                            <View
+                                android:layout_width="0.7dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/x4dp"
+                                android:layout_marginBottom="@dimen/x4dp"
+                                android:background="@color/textSecondary" />
+
+                            <include
+                                android:id="@+id/block"
+                                layout="@layout/layout_value_text_2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/x8dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/estimatedCard"
+                    style="@style/cardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
+                        android:padding="@dimen/padding_parent">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estimated_earnings"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/estimatedInfo"
+                            android:layout_width="@dimen/padding_parent"
+                            android:layout_height="@dimen/padding_parent"
+                            android:layout_marginStart="@dimen/x8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icons8_info"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView"
+                            app:layout_constraintStart_toEndOf="@+id/textView"
+                            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                        <ImageButton
+                            android:id="@+id/estimatedSwitch"
+                            android:layout_width="@dimen/image_size_extra_small"
+                            android:layout_height="@dimen/image_size_extra_small"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="@dimen/x5dp"
+                            android:src="@drawable/icons8_data_transfer_1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <include
+                            android:id="@+id/estimated"
+                            layout="@layout/layout_crypto_currency_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x4dp"
+                            app:layout_constraintTop_toBottomOf="@+id/estimatedSwitch" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <RelativeLayout
+                    android:id="@+id/payoutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_parent"
+                    android:layout_marginBottom="@dimen/x5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/x5dp"
+                        android:layout_marginEnd="@dimen/padding_parent_small"
+                        android:layout_toStartOf="@id/viewAllPayout"
+                        android:text="@string/latest_payment"
+                        android:textSize="@dimen/text_extra_large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/viewAllPayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/x5dp"
+                        android:text="@string/view_all_payments"
+                        android:textColor="?colorPrimary"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <com.acxdev.shimmer.widget.ShimmerRecycler
+                    android:id="@+id/payout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:shimmerRecyclerLayout="@layout/row_payout_shimmer"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/row_payout" />
+
+                <RelativeLayout
+                    android:id="@+id/workerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_parent"
+                    android:layout_marginBottom="@dimen/x5dp">
+
+                    <TextView
+                        android:id="@+id/activeWorkers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/x5dp"
+                        android:layout_marginEnd="@dimen/padding_parent_small"
+                        android:layout_toStartOf="@id/viewAllWorkers"
+                        android:text="@string/activeWorkers"
+                        android:textSize="@dimen/text_extra_large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/viewAllWorkers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/x5dp"
+                        android:text="@string/view_all_workers"
+                        android:textColor="?colorPrimary"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <com.acxdev.shimmer.widget.ShimmerRecycler
+                    android:id="@+id/workers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:angle="45"
+                    app:shimmerRecyclerCount="4"
+                    app:grid="2"
+                    app:shimmerRecyclerLayout="@layout/row_worker"
+                    app:layout_manager="grid"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/row_worker" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wentWrong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_parent"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x200dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ic_wallet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding_parent"
+            android:text="@string/whoops_nlooks_like_something_went_wrong_with_your_wallet"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

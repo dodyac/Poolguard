@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/x10dp">
+
+    <com.acxdev.commonFunction.widget.NestedScrollableHost
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.acxdev.commonFunction.widget.NestedScrollableHost>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/timeLayout" />
+
+    <LinearLayout
+        android:id="@+id/checkBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chart"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/reportedHashrateCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/green"
+            android:checked="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/x30dp"
+            android:text="@string/reported"
+            android:textColor="@color/text" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/currentHashrateCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primaryBlue"
+            android:checked="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/x30dp"
+            android:text="@string/current"
+            android:textColor="@color/text" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/averageHashrateCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/yellow"
+            android:checked="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/x30dp"
+            android:text="@string/average"
+            android:textColor="@color/text" />
+    </LinearLayout>
+</RelativeLayout>

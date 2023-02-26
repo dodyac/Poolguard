@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Poolguard" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryBlue</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/cardBackground</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/cardBackground</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:textColor">@color/text</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/manrope_medium</item>
+        <item name="colorBackgroundFloating">@color/blueSecondary</item>
+        <item name="colorSwitchThumbNormal">@color/background</item>
+        <item name="colorControlActivated">@color/cardBackground</item>
+    </style>
+
+    <style name="Theme.PoolguardAmoled" parent="Theme.Poolguard">
+        <item name="colorSwitchThumbNormal">@color/black</item>
+        <item name="colorControlActivated">#0f0f0f</item>
+    </style>
+
+    <style name="Theme.PoolguardRed" parent="Theme.Poolguard">
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/red</item>
+        <item name="colorBackgroundFloating">@color/redSecondary</item>
+    </style>
+
+    <style name="Theme.PoolguardGreen" parent="Theme.Poolguard">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/green</item>
+        <item name="colorBackgroundFloating">@color/greenSecondary</item>
+    </style>
+
+    <style name="Theme.PoolguardYellow" parent="Theme.Poolguard">
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorBackgroundFloating">@color/yellowSecondary</item>
+    </style>
+
+    <style name="Theme.PoolguardBlue2" parent="Theme.Poolguard">
+        <item name="colorPrimary">@color/blue2</item>
+        <item name="colorPrimaryVariant">@color/blue2</item>
+        <item name="colorBackgroundFloating">@color/blue2Secondary</item>
+    </style>
+
+    <style name="Theme.PoolguardGreen2" parent="Theme.Poolguard">
+        <item name="colorPrimary">@color/green2</item>
+        <item name="colorPrimaryVariant">@color/green2</item>
+        <item name="colorBackgroundFloating">@color/green2Secondary</item>
+    </style>
+
+    <style name="Theme.PoolguardRed2" parent="Theme.Poolguard">
+        <item name="colorPrimary">@color/red2</item>
+        <item name="colorPrimaryVariant">@color/red2</item>
+        <item name="colorBackgroundFloating">@color/red2Secondary</item>
+    </style>
+
+    <style name="Theme.PoolguardYellow2" parent="Theme.Poolguard">
+        <item name="colorPrimary">@color/yellow2</item>
+        <item name="colorPrimaryVariant">@color/yellow2</item>
+        <item name="colorBackgroundFloating">@color/yellow2Secondary</item>
+    </style>
+
+    <style name="Theme.PoolguardPurple" parent="Theme.Poolguard">
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/purple</item>
+        <item name="colorBackgroundFloating">@color/purpleSecondary</item>
+    </style>
+</resources>

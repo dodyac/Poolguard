@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    non dark color-->
+    <color name="primaryBlue">#2B71FF</color>
+    <color name="green">#1EE12E</color>
+    <color name="red">#FF327F</color>
+    <color name="yellow">#FF9400</color>
+    <color name="blue2">#0984E3</color>
+    <color name="green2">#26DE80</color>
+    <color name="red2">#FD6A57</color>
+    <color name="yellow2">#FBB315</color>
+    <color name="purple">#4E4BD7</color>
+    <color name="blueSecondary">#200083FE</color>
+    <color name="yellowSecondary">#20FF9400</color>
+    <color name="redSecondary">#20FF327F</color>
+    <color name="greenSecondary">#201EE12E</color>
+    <color name="blue2Secondary">#200984E3</color>
+    <color name="green2Secondary">#2026DE80</color>
+    <color name="red2Secondary">#20FD6A57</color>
+    <color name="yellow2Secondary">#20FBB315</color>
+    <color name="purpleSecondary">#204E4BD7</color>
+    <color name="facebook_background">#0F90F3</color>
+    <color name="discordBackground">#5662F6</color>
+    <color name="telegramBackground">#318FEC</color>
+
+    <color name="text">#363851</color>
+    <color name="background">#F8FAFE</color>
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="cardBackground2">#FFFFFF</color>
+    <color name="blackSecondary">#E3E3E3</color>
+
+    <color name="pool">#F8FAFE</color>
+    <color name="textSecondary">#AFB5CE</color>
+    <color name="textSecondary2">#20AFB5CE</color>
+    <color name="backgroundSecondary">#E9EDFD</color>
+    <color name="backgroundSecondary2">#20363851</color>
+</resources>

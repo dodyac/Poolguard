@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="?colorControlActivated"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_parent_small"
+    tools:context=".ui.about.ActivityAbout">
+
+    <ImageView
+        android:id="@+id/app"
+        android:layout_width="@dimen/image_size_extra_large"
+        android:layout_height="@dimen/image_size_extra_large"
+        android:src="@drawable/ic_logo_text" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/text_small" />
+
+    <TextView
+        android:id="@+id/dev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2021_acx_dev"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_parent"
+        android:text="@string/app_icon_by_icons8"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/text_small" />
+
+    <TextView
+        android:id="@+id/translator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_parent"
+        android:text="@string/translator"
+        android:textColor="?colorPrimary"
+        android:textSize="@dimen/text_small" />
+</LinearLayout>

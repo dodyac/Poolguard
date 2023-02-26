@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSwitchThumbNormal"
+    android:orientation="vertical"
+    tools:context=".ui.list.ActivityList">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/cardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.acxdev.shimmer.widget.ShimmerRecycler
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false" />
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

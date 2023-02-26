@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardViewStyle"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="?colorSwitchThumbNormal"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x16dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/models"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x8dp"
+            android:layout_toStartOf="@+id/indec"
+            android:textColor="@color/text"
+            android:buttonTint="?colorPrimary"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/indec"
+            style="@style/tilStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="0dp"
+            app:boxBackgroundColor="?colorControlActivated"
+            android:enabled="true"
+            app:endIconCheckable="true"
+            app:endIconDrawable="@drawable/icons8_add_new"
+            app:endIconMode="custom"
+            app:endIconTint="?colorPrimary"
+            app:startIconCheckable="true"
+            app:startIconDrawable="@drawable/icons8_reduce"
+            app:startIconTint="@color/default_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

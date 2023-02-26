@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/empty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/x16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/image_size_extra_large"
+        android:layout_height="@dimen/image_size_extra_large"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ic_empty" />
+
+    <TextView
+        android:id="@+id/emptyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/padding_parent"
+        android:layout_marginTop="@dimen/padding_parent"
+        android:layout_marginEnd="@dimen/padding_parent"
+        android:gravity="center_horizontal"
+        android:text="No pool available"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/padding_parent_small"
+        android:gravity="center_horizontal"
+        android:id="@+id/emptySubtitle"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/text_small" />
+</LinearLayout>

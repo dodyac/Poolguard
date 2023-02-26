@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        style="@style/cardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/x0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/x10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/x8dp">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="@dimen/x16dp"
+                    android:layout_height="@dimen/x16dp"
+                    android:layout_alignBottom="@id/image"
+                    android:alpha="0.8"
+                    android:background="@drawable/bg_circle"
+                    android:backgroundTint="@color/primaryBlue"
+                    android:translationZ="@dimen/x2dp" />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/x50dp"
+                    android:layout_height="@dimen/x50dp"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.5"
+                    android:src="@drawable/bg_rounded_small"
+                    app:tint="@color/default_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/x8dp"
+                    android:layout_toEndOf="@id/image"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:background="@drawable/bg_rounded_extra_small"
+                        android:backgroundTint="@color/default_color"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        app:shimmerTextCornerRadius="8" />
+
+                    <TextView
+                        android:id="@+id/subtitleColor"
+                        android:layout_width="@dimen/x32dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x8dp"
+                        android:alpha="0.5"
+                        android:background="@drawable/bg_rounded_extra_small"
+                        android:backgroundTint="@color/primaryBlue"
+                        android:textSize="@dimen/text_extra_small" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/x8dp">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="@dimen/x50dp"
+                    android:layout_height="@dimen/x50dp"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.3"
+                    android:src="@drawable/bg_rounded_small"
+                    app:tint="@color/default_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/x8dp"
+                    android:layout_toEndOf="@id/image2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleColor"
+                        android:layout_width="@dimen/x20dp"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:background="@drawable/bg_rounded_extra_small"
+                        android:backgroundTint="@color/primaryBlue"
+                        android:textSize="@dimen/text_small" />
+
+                    <TextView
+                        android:id="@+id/subtitle"
+                        android:layout_width="@dimen/x40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x8dp"
+                        android:alpha="0.5"
+                        android:background="@drawable/bg_rounded_extra_small"
+                        android:backgroundTint="@color/default_color"
+                        android:textSize="@dimen/text_extra_small"
+                        app:shimmerTextCornerRadius="8" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x4dp"
+        android:id="@+id/value"
+        android:layout_marginEnd="@dimen/x4dp"
+        android:text="@string/app_name"
+        android:textSize="@dimen/text_small"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"/>
+</LinearLayout>

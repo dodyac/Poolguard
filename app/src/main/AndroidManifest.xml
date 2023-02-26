@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Internet -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- For background jobs -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="${appIcon}"
+        android:label="@string/app_name"
+        android:roundIcon="${appIconRound}"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Poolguard"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.worker.ActivityWorkerHistory"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.worker.ActivityWorkers"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payout.ActivityPayouts"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.dashboard.ActivityDashboard"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.gpu.ActivityGPUStats"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.gpu.ActivityGPU"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.about.ActivityAbout"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.list.ActivityList"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pool.ActivityPool"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ActivitySplash"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.ActivityMain"
+            android:configChanges="keyboardHidden|orientation|screenSize|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.acxdev.poolguardapps.service.NotificationBroadcast"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

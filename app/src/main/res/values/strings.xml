@@ -1,0 +1,233 @@
+<resources>
+    <string name="app_name_release" translatable="false">Poolguard</string>
+    <string name="app_name_debug" translatable="false">Poolguard Debug</string>
+    <string name="sentryPool" translatable="false">SentryPool</string>
+    <string name="adUnitIdBanner" translatable="false">ca-app-pub-9813797736848421/5806278372</string>
+    <string name="adUnitIdInterstitial" translatable="false">ca-app-pub-9813797736848421/1867033361</string>
+    <string name="adValue" translatable="false">ca-app-pub-9813797736848421~9154017513</string>
+    <string name="english" translatable="false">English</string>
+    <string name="russian" translatable="false">Pусский</string>
+    <string name="chinese" translatable="false">中国人</string>
+    <string name="spanish" translatable="false">Spanish</string>
+    <string name="bahasa" translatable="false">Bahasa Indonesia</string>
+    <string-array name="unitHash" translatable="false">
+        <item>H/s</item>
+        <item>KH/s</item>
+        <item>MH/s</item>
+        <item>GH/s</item>
+        <item>TH/s</item>
+    </string-array>
+    <string-array name="month" translatable="false">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+    <string name="space" translatable="false">Space</string>
+    <string name="spacer" translatable="false">%s %s</string>
+    <string name="no" translatable="false">No</string>
+    <string name="hashrate" translatable="false">Hashrate</string>
+    <string name="stripes" translatable="false">%s - %s</string>
+    <string name="_2021_acx_dev" translatable="false">© 2021-2023 Acx Dev.</string>
+    <string name="crayola" translatable="false">Crayola</string>
+    <string name="electricPink" translatable="false">Electric Pink</string>
+    <string name="limeGreen" translatable="false">Lime Green</string>
+    <string name="vividGamboge" translatable="false">Vivid Gamboge</string>
+    <string name="blueCola" translatable="false">Blue Cola</string>
+    <string name="ufoGreen" translatable="false">UFO Green</string>
+    <string name="bittersweet" translatable="false">Bittersweet</string>
+    <string name="spanishYellow" translatable="false">Spanish Yellow</string>
+    <string name="iris" translatable="false">Iris</string>
+    <string name="midNightAmoled" translatable="false">Midnight (AMOLED)</string>
+    <!--    Translate-->
+    <string name="translator">Translator</string>
+    <string name="translatedBy">Translated by: %s</string>
+    <string name="home">Home</string>
+    <string name="wallet">Wallet</string>
+    <string name="wallets">Wallets</string>
+    <string name="news">News</string>
+    <string name="profitability_calculator">Profitability Calculator</string>
+    <string name="calculator">Calculator</string>
+    <string name="settings">Settings</string>
+    <string name="unpaidBalance">Unpaid Balance</string>
+    <string name="total_paid">Total Paid</string>
+    <string name="thisMonth">This Month</string>
+    <string name="lastMonth">Last Month</string>
+    <string name="estimated_earnings">Estimated Earnings</string>
+    <string name="hourly">Hourly</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+    <string name="latest_news">Latest News</string>
+    <string name="add_more_wallet">Add More Wallet</string>
+    <string name="general">General</string>
+    <string name="currency">Currency</string>
+    <string name="language">Language</string>
+    <string name="theme">Theme</string>
+    <string name="refreshPeriod">Repeat</string>
+    <string name="workerOffline">Worker Offline</string>
+    <string name="hashrateDrop">Hashrate Drop</string>
+    <string name="support">Support</string>
+    <string name="shareApps">Share Apps</string>
+    <string name="rateUs">Rate Us</string>
+    <string name="helpUsTranslate">Help Us Translate</string>
+    <string name="immatureBalance">Immature Balance</string>
+    <string name="current">Current</string>
+    <string name="reported">Reported</string>
+    <string name="average">Average</string>
+    <string name="stale">Stale</string>
+    <string name="valid">Valid</string>
+    <string name="invalid">Invalid</string>
+    <string name="worker">Worker</string>
+    <string name="workers">Workers</string>
+    <string name="shares">Shares</string>
+    <string name="latest_payment">Latest Payment</string>
+    <string name="activeWorkers">Active Workers</string>
+    <string name="deleteWallet">Delete Wallet</string>
+    <string name="viewOn">View on %s</string>
+    <string name="pinToDashboard">Pin to dashboard</string>
+    <string name="unpinFromDashboard">Unpin from dashboard</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="calculate">Calculate</string>
+    <string name="chooseCoinFirst">Please choose coin first</string>
+    <string name="successfullyAddedWallet">Successfully added your wallet</string>
+    <string name="pinnedSuccessfully">Successfully pinned to dashboard.\nYou may need to restart this app or wait until auto update process is completed to apply these changes.</string>
+    <string name="unpinnedSuccessfully">Unpinned from dashboard.\nYou may need to restart this app or wait until auto update process is completed to apply these changes.</string>
+    <string name="areYouSureWannaDeleteWallet">Are You sure want to delete this wallet?</string>
+    <string name="walletSuccessfullyDeleted">Your wallet has been successfully deleted</string>
+    <string name="tapAgainToExit">Tap again to exit</string>
+    <string name="settingSaved">Your setting has been saved</string>
+    <string name="payments">Payments</string>
+    <string name="choosePool">Choose Pool</string>
+    <string name="emptyWalletTitle">Start Tracking Your Mining Portfolio</string>
+    <string name="emptyWalletSubtitle">Our apps is the easiest way to track, and manage your mining rig.</string>
+    <string name="title_add_wallet">Add Wallet</string>
+    <string name="fees">%s Fees</string>
+    <string name="profit">%s Profit</string>
+    <string name="powerCost">%s Power Cost</string>
+    <string name="autoUpdate">Auto Update</string>
+    <string name="estimatedEarningsInfo">Estimated earnings are based on current diff</string>
+    <string name="activeWorkersNum">Workers (%d)</string>
+    <string name="activeWorkerNum">Worker (%d)</string>
+    <string name="updateIn">Update in %ds</string>
+    <string name="version">Version</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="estimatedEarningsByHashRate">Estimated earnings are based on current diff and your average hashrate.</string>
+    <string name="soon">Soon</string>
+    <string name="inProgress">In Progress</string>
+    <string name="changelog">Release Notes</string>
+    <string name="isCurrentlyOffline">%s is currently offline.</string>
+    <string name="totalCoin">%d Coin</string>
+    <string name="totalCoins">%d Coins</string>
+    <string name="myDevice">Devices</string>
+    <string name="checkWalletAddress">Please check the wallet address before you save it and make sure the address you entered is correct.</string>
+    <string name="expectedBalance">Expected Balance</string>
+    <string name="efficiency">Efficiency</string>
+    <string name="luck">Luck</string>
+    <string name="credits">Credits</string>
+    <string name="nextBlock">Next Block</string>
+    <string name="copyAddress">Copy Address</string>
+    <string name="addressCopiedSuccessfully">Address copied successfully!</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="latestBlocks">Latest Blocks</string>
+    <string name="couldFind">Sorry, we couldn\'t find any matches for \'%s\'</string>
+    <string name="blockReward">Block Reward</string>
+    <string name="algorithm">Algorithm</string>
+    <string name="hide">Hide</string>
+    <string name="viewAll">View All</string>
+    <string name="hashrateDropBy">Hashrate drop by: %s %</string>
+    <string name="allowNotifications">Allow Notifications</string>
+    <string name="whatsNew">What\'s New</string>
+    <string name="about">About</string>
+    <string name="defaultScreen">Default Screen</string>
+    <string name="useDefaultBrowser">Use Default Browser</string>
+    <string name="totalBalance">Total Balance</string>
+    <string name="totalHashrate">Total Hashrate</string>
+    <string name="somethingWentWrong">Something went wrong</string>
+    <string name="sortByName">Sort By Name</string>
+    <string name="sortByPool">Sort By Pool</string>
+    <string name="sortByAddress">Sort By Address</string>
+    <string name="sortByCoin">Sort By Coin</string>
+    <string name="app_icon_by_icons8">App icon by Icons8.</string>
+    <string name="view_all_payments">View all payments</string>
+    <string name="view_all_workers">View all workers</string>
+    <string name="whoops_nlooks_like_something_went_wrong_with_your_wallet">Whoops...\nLooks like something went wrong with your wallet.</string>
+    <string name="find_algorithm">Find Algorithm</string>
+    <string name="try_shortening_or_rephrasing_your_search">Try shortening or rephrasing your search.</string>
+    <string name="search_by_name_crypto_name_code">Search by Name / Crypto Name / Code</string>
+    <string name="cannot_find_your_pool">Cannot find your Pool?</string>
+    <string name="request_pool">Request Pool</string>
+    <string name="featured_coins">Featured Coins</string>
+    <string name="unit">Unit</string>
+    <string name="mh_s">MH/s</string>
+    <string name="power">Power</string>
+    <string name="cost">Cost</string>
+    <string name="pool_fee">Pool Fee</string>
+    <string name="filter">Filter</string>
+    <string name="notification">Notification</string>
+    <string name="title">Title</string>
+    <string name="oops_no_internet_connection">Oops, No Internet Connection</string>
+    <string name="it_seems_is_something_wrong_with_your_internet_connection_make_sure_your_wi_fi_or_cellular_data_is_turned_on_and_then_try_again">It seems is something wrong with your internet connection. Make sure your Wi-Fi or Cellular data is turned on and then try again.</string>
+    <string name="try_again">Try Again</string>
+    <string name="text">Text</string>
+    <string name="add_wallet">Add Wallet</string>
+    <string name="name">Name</string>
+    <string name="wallet_address">Wallet address</string>
+    <string name="save">Save</string>
+    <string name="find_currency">Find Currency</string>
+    <string name="developer_mode">Developer Mode</string>
+    <string name="unlock">Unlock</string>
+    <string name="learn_more">Learn more</string>
+    <string name="got_it">Got it</string>
+    <string name="currencyType">Currency Type</string>
+    <string name="sort">Sort</string>
+    <string name="key">Key</string>
+    <string name="hasSent">%s has sent %s to your wallet.</string>
+    <string name="inTheFuture">in the future</string>
+    <string name="momentsAgo">moments ago</string>
+    <string name="aMinuteAgo">a minute ago</string>
+    <string name="minutesAgo">%d minutes ago</string>
+    <string name="anHourAgo">an hour ago</string>
+    <string name="hoursAgo">%d hours ago</string>
+    <string name="yesterday">yesterday</string>
+    <string name="daysAgo">%d days ago</string>
+    <string name="restart">Restart</string>
+    <string name="minutes">%d Minutes</string>
+    <string name="oneHour">1 Hour</string>
+    <string name="hours">%d Hours</string>
+    <string name="oneDay">1 Day</string>
+    <string name="days">%d Days</string>
+    <string name="disableBattery">If you\'re not receiving any notifications on your Android phone, try to disable battery optimization.</string>
+    <string name="cannotEmpty">cannot be empty!</string>
+    <string name="manual">Manual</string>
+    <string name="jan">January</string>
+    <string name="feb">February</string>
+    <string name="mar">March</string>
+    <string name="apr">April</string>
+    <string name="may">May</string>
+    <string name="jun">June</string>
+    <string name="jul">July</string>
+    <string name="aug">August</string>
+    <string name="sep">September</string>
+    <string name="oct">October</string>
+    <string name="nov">November</string>
+    <string name="dec">December</string>
+    <string name="color">Color</string>
+    <string name="migrate">Migrate</string>
+    <string name="removeDevice">Remove Device</string>
+    <string name="appearance">Appearance</string>
+    <string name="joinCommunity">Join Community</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
