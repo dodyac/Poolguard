@@ -238,7 +238,7 @@ object ChangelogNote {
 
     fun v1point20() = listOf(
         Field("New: Remove Ads","Removed all ads, now Poolguard is completely FREE!"),
-        Field("New: EthereumPoW (ETHW","Added EthereumPoW (ETHW) after Ethereum migration."),
+        Field("New: EthereumPoW (ETHW)","Added EthereumPoW (ETHW) after Ethereum migration."),
         Field("Removed: Inactive Pools","Removed some inactive pools."),
         Field("Improve: Performance","Enjoy better performance with improved functionality."),
         Field("Fix: Android 13","Fixed the function not working properly on Android 13."),
